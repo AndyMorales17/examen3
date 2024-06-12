@@ -67,10 +67,10 @@ body, html {
             <a class="nav-link" href="<?php echo URL;?>">INICIO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="buzonpracticas">Buzon de pratica</a>
+                    <a class="nav-link" href="crud_clientes">Buzon de pratica</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="alumnos">Alumnos</a>
+                    <a class="nav-link" href="crud_pedidos">Alumnos</a>
                 </li>
                 
             </ul>

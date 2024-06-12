@@ -40,9 +40,8 @@
         </header>
         <main>
         <?php
-           
-           $Contenido = new contenido();
-           require_once($Contenido->mostra_archivo());
+           $Contenido=new Contenido();
+           require_once($Contenido->Mostrar_archivo());
         ?>
 
         </main>

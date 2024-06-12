@@ -1,6 +1,5 @@
 <?php
 
-date_default_timezone_set('America/El Salvador');
 
 
 if (!defined('SERVIDOR')) define('SERVIDOR', 'localhost');
