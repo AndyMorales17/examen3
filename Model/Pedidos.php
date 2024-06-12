@@ -58,8 +58,6 @@ Class Pedidos {
         $this->estado = $estado;
       }
 
-
-
 }
 
 ?>
