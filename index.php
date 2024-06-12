@@ -5,9 +5,9 @@ if (!defined("URL")) {
 }
 
 // Include the menuadmin.php file from the vistas/admin/ directory
-require_once("view/admin/index.php");
+require_once("View/admin/index.php");
 
 // Include the contenido.php file from the controladores/ directory
-require_once("controladores/contenido.php");
+require_once("Controllers/contenido.php");
 ?>
 

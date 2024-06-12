@@ -32,18 +32,17 @@
             <!-- place navbar here -->
             
             <?php 
-
-         
+ 
                 require_once("menuadmin.php");
-        
-           
+
             ?>
 
         </header>
         <main>
         <?php
-            $contenido=new contenido();
-            require_once( $contenido->mostra_archivo());
+           
+           $Contenido = new contenido();
+           require_once($Contenido->mostra_archivo());
         ?>
 
         </main>

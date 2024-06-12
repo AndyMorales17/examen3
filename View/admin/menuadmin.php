@@ -1,106 +1,80 @@
+
 <style>
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px; /* Añade un poco de padding para asegurar espacio alrededor de los elementos */
-    background-color: #294352; /* Color de fondo */
+
+/* Estilos para el botón de navegación */
+.custom-toggler {
+    border-color: #3498db;
 }
 
-.navbar-toggler {
-    background-color: #294352; /* Color de fondo para el botón */
-    color: #ffffff; /* Color del texto */
-    border: none;
-    padding: 8px 12px; /* Ajusta el padding para cambiar el tamaño del botón */
-    font-size: 40px; /* Aumenta el tamaño de la fuente del botón */
-    cursor: pointer;
-    text-transform: uppercase; /* Mantiene las letras en mayúsculas */
-    font-weight: bold; /* Mantiene el texto en negrita */
-    border-radius: 5px; /* Bordes redondeados del botón */
+.custom-toggler .navbar-toggler-icon {
+    background-color: #3498db;
 }
 
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    color: white; /* Color del texto */
-    text-decoration: none; /* Remueve el subrayado del enlace */
-    font-size: 12px; /* Aumenta el tamaño de la fuente para hacer el nombre de la farmacia más visible */
+/* Estilos para los enlaces de navegación */
+.navbar-nav .nav-item .nav-link {
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase; /* Convertir a mayúsculas */
+    font-family: 'Roboto', sans-serif; /* Fuente bonita (puedes cambiarla por la que desees) */
 }
 
-.navbar-brand img {
-    height: 50px; /* Ajusta esto para cambiar el tamaño del logo */
-    margin-right: 10px; /* Espacio entre el logo y el texto */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #3498db;
 }
 
-.navbar-collapse {
-    height: 100%;
-    width: 0; /* Inicialmente oculto */
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #294352; /* Color de fondo del panel lateral */
-    overflow-x: hidden;
-    transition: 0.5s; /* Suaviza la transición */
-    padding-top: 60px;
+/* Estilos para el botón de búsqueda */
+.btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
 }
 
-.navbar-nav {
-    display: block;
-    padding-left: 25px;
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
 }
 
-.nav-item {
-    margin-bottom: 10px;
+body, html {
+    height: 100%; /* Establecer altura al 100% */
 }
 
-.navbar-collapse.open {
-    width: 250px; /* Ajusta el ancho del panel lateral cuando está abierto */
-}
-
-.nav-link {
-    color: white; /* Ajusta el color de los enlaces */
-    display: block;
-    padding: 10px;
-}
-
+.navbar-nav .nav-item .nav-link {
+            color: #000000; /* Color blanco para destacar */
+            text-transform: uppercase; /* Convertir a mayúsculas */
+            font-family: 'Roboto', sans-serif; /* Fuente bonita */
+            font-weight: bold; /* Negrita */
+            transition: color 0.3s, transform 0.3s; /* Transición suave para efectos */
+            padding: 0.5rem 1rem; /* Añadir padding para mejor apariencia */
+            
+        }
 
 </style>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
 
-    navbarToggler.addEventListener('click', function () {
-        navbarCollapse.classList.toggle('open');
-    });
-});
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
 
-</script>
 
-<nav class="navbar text-uppercase fixed-top" id="mainNav">
+
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="container">
-        <button class="navbar-toggler text-uppercase font-weight-bold rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-            <span style="font-size: 24px;">Menu <i class="fas fa-bars"></i> </span>
+       <!-- <a class="navbar-brand" href="<?//php echo URL;?>">Inicio</a>-->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-brand">
-            <a href="inicio" style="text-decoration: none; color: #ffffff;">
-                <img src="assets/img/hospital1.png" alt="Logo" style="height: 40px; margin-right: 10px;"> FARMACIA MAZAPAN
-            </a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="categoria">CATEGORIA</a></li>
-                <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="nosotros">NOSOTROS</a></li>
-                <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="proveedores">Proveedores</a></lci>
-                <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="todos">productos</a></lci>
-                <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login">login</a></lci>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+            <a class="nav-link" href="<?php echo URL;?>">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="buzonpracticas">Buzon de pratica</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="alumnos">Alumnos</a>
+                </li>
                 
             </ul>
-
+            
         </div>
     </div>
 </nav>
-

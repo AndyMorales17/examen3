@@ -1,11 +1,11 @@
 <?php
 
-class contenido
+Class contenido
 {
 
     public function mostra_archivo()
     {
-        require_once("conexion.php");
+        require_once("Conexion.php");
 
 
         $url = isset($_GET["url"]) ? $_GET["url"] : null;
@@ -15,8 +15,8 @@ class contenido
         
         if($url[0]==null){
             $pagina="vistas/inicio.php";}
-        elseif ($url[0] == "estado") { 
-                $pagina = "vistas/administrador/menuadmin";
+        elseif ($url[0] == "crud_clientes") { 
+                $pagina = "View/admini/menuadmin.php";
         }elseif ($url[0] == "inicio") {
             $pagina = "vistas/inicio.php";
         }elseif ($url[0] == "categoria") {
